@@ -7,7 +7,7 @@ import Ecommerce from "../assets/SSEcommerce.webp";
 
 const Proyectos = () => {
   return (
-    <div className="w-full md:py-4">
+    <div id="portafolio" className="w-full md:py-4 py-6">
         <h1 className="text-center text-2xl font-bold text-white md:text-3xl md:font-black">Proyectos Realizados</h1>
       <div className="w-[90%] mx-auto text-white  p-2 flex flex-col gap-4 md:gap-3 md:grid md:grid-cols-2">
         
