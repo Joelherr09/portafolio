@@ -12,7 +12,7 @@ const Navbar = () => {
     }
 
   return (
-    <div className='flex items-center justify-between fixed px-8 h-24 w-full z-50 bg-[#1b1464] mx-auto text-white'>
+    <div className='flex items-center justify-between fixed px-8 h-24 w-full z-50 bg-[#1b1464] mx-auto text-white shadow-lg shadow-blue-500/50'>
         <div className='flex'>
             <h1 className='text-3xl font-semibold '>Joel <ReactTyped className=' font-semibold' strings={['Herrera']} typeSpeed={120} backSpeed={140} loop /></h1>
         </div>
