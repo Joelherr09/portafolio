@@ -4,4 +4,5 @@
 
 .bg-img{
     background-image: url(./assets/bg.webp);
+    position: sticky;
 }
