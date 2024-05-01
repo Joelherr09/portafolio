@@ -12,7 +12,7 @@ const Proyectos = () => {
       <div className="w-[90%] mx-auto text-white  p-2 flex flex-col gap-4 md:gap-3 md:grid md:grid-cols-2">
         
         <div className="bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50 p-3 hover:scale-105 duration-300">
-          <a href="" target="_blank" rel="noreferrer">
+          <a href="https://www.vendepo.cl/" target="_blank" rel="noreferrer">
             <img src={Vendepo} alt="" />
             <div className="py-1">
                 <h4 className="text-2xl font-semibold">Vende Po!</h4>
@@ -25,7 +25,7 @@ const Proyectos = () => {
           </a>
         </div>
         <div className="bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50 p-3 hover:scale-105 duration-300">
-          <a href="" target="_blank" rel="noreferrer">
+          <a href="https://www.cuartavoleibol.online/" target="_blank" rel="noreferrer">
             <img src={CVSS} alt="" />
             <div className="py-1">
                 <h4 className="text-2xl font-semibold">Cuarta Voleibol</h4>
@@ -38,7 +38,7 @@ const Proyectos = () => {
           </a>
         </div>
         <div className="bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50 p-3 hover:scale-105 duration-300">
-          <a href="" target="_blank" rel="noreferrer">
+          <a href="https://programaconerick.site/" target="_blank" rel="noreferrer">
             <img src={Cabana} alt="" />
             <div className="py-1">
                 <h4 className="text-2xl font-semibold">Playa Norte</h4>
@@ -51,7 +51,7 @@ const Proyectos = () => {
           </a>
         </div>
         <div className="bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50 p-3 hover:scale-105 duration-300">
-          <a href="" target="_blank" rel="noreferrer">
+          <a href="https://ecommercechile.netlify.app/" target="_blank" rel="noreferrer">
             <img src={Ecommerce} alt="" />
             <div className="py-1">
                 <h4 className="text-2xl font-semibold">E-commerce</h4>
