@@ -27,7 +27,7 @@ const Navbar = () => {
 
 
         <ul className='hidden md:flex'>
-            <a href="/#inicio">
+            <a href="/">
                 <li className='p-4 text-lg hover:scale-105 duration-300 hover:font-bold'>Inicio</li>
             </a>
             <a href="/#habilidades">
@@ -35,6 +35,9 @@ const Navbar = () => {
             </a>
             <a href="/#portafolio">
                 <li className='p-4 text-lg hover:scale-105 duration-300 hover:font-bold'>Portafolio</li>
+            </a>
+            <a href="/#contacto">
+                <li className='p-4 text-lg hover:scale-105 duration-300 hover:font-bold'>Contacto</li>
             </a>
             
         </ul>
@@ -52,7 +55,7 @@ const Navbar = () => {
                 <h1 className='text-3xl font-semibold text-center'>Joel <ReactTyped className=' font-semibold' strings={['Herrera']} typeSpeed={120} backSpeed={140} loop /></h1>
             </div>
                 <ul className='p-4 uppercase' >
-                    <a href="/#inicio" onClick={handleNav}>
+                    <a href="/" onClick={handleNav}>
                         <li className='p-4 border-b border-gray-600'>Inicio</li>
                     </a>
                     <a href="/#habilidades" onClick={handleNav}>
@@ -60,6 +63,9 @@ const Navbar = () => {
                     </a>
                     <a href="/#portafolio" onClick={handleNav}>
                         <li className='p-4'>Portafolio</li>
+                    </a>
+                    <a href="/#contacto" onClick={handleNav}>
+                        <li className='p-4'>Contacto</li>
                     </a>
                 </ul>
             <div className='h-full flex gap-2 mx-auto justify-center items-center pb-24'>

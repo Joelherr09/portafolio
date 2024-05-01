@@ -1,7 +1,5 @@
 import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser';
-import { FaGithubSquare } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -30,13 +28,13 @@ const Contacto = () => {
     const notify = () => {
        //toast("Correo enviado!");
         toast.success("Correo enviado!", {
-            position: "top-center"
+            position: "top-center",
           });
     }
 
   return (
     
-    <div className='w-[100%] md:w-[70%] mx-auto text-white bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50 p-3 my-6'>
+    <div id='contacto' className='w-[100%] md:w-[70%] mx-auto text-white bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50 p-3 my-10'>
         
         <h1 className='text-center text-2xl font-semibold md:text-3xl md:font-black'>Contáctame</h1>
         <div className=' w-full mx-auto justify-center flex flex-col items-center'>
@@ -65,10 +63,6 @@ const Contacto = () => {
                 </form>
             </div>
 
-            <div className='h-full flex gap-2 items-center'>
-                <a href="https://twitter.com/joelherr09" target="_blank" rel="noreferrer"><FaSquareXTwitter size={36} className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-blue-500/50 rounded-lg'/></a>
-                <a href="https://github.com/Joelherr09" target="_blank" rel="noreferrer"><FaGithubSquare size={36} className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-blue-500/50 rounded-lg'/></a>
-            </div>
             <ToastContainer />
         </div>
     </div>
