@@ -16,9 +16,9 @@ const Hero = () => {
             <p className='text-slate-400'>Fullstack Developer</p>
         </div>
 
-        <div className='md:flex md:w-[80%] w-full mx-auto md:mx-auto pb-4 '>
+        <div className='md:flex md:w-[80%] w-full justify-center mx-auto md:mx-auto pb-4 '>
 
-            <div className='flex w-[90%] h-full gap-4 justify-center md:justify-end md:flex-row-reverse'>
+            <div className='flex w-[90%] h-full gap-4 justify-center mx-auto md:justify-end md:flex-row-reverse'>
                 <img src={Foto} alt="" className='max-h-[400px] drop-shadow-lg rounded-b-xl'/>
                 <div className='flex flex-col  bg-slate-700/80 drop-shadow-lg gap-4 my-auto h-full items-center p-3 shadow-lg shadow-blue-500/50'>
                     <img src={ReactLogo} alt="" className='h-[60px] w-[60px]  hover:scale-105 duration-300'/>
@@ -30,7 +30,7 @@ const Hero = () => {
             <div className='text-white w-[90%] mt-2 h-full mx-auto items-center md:my-auto  bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50'>
                 <h1 className='text-4xl font-bold text-center py-3'>Habilidades</h1>
                 <div className=' w-[90%] mx-auto'>
-                    <p className='text-lg text-center py-2'>Soy desarrollador <strong>Fullstack</strong>, estudiante de Ingeniería en Informática en Inacap. Apasionado por el Desarrollo Web. <br /> En <strong> Front-end</strong> utilizo React, Tailwind. Diseño con Figma, Adobe Photoshop. <br /> En <strong>Back-end</strong> utilizo Php, Django. He experimentado con BaaS como Appwrite.</p>
+                    <p className='text-lg text-center py-2'>Soy desarrollador <strong>Fullstack</strong>, estudiante de <strong>Ingeniería en Informática</strong> en Inacap. Apasionado por el Desarrollo Web. <br /> En <strong> Front-end</strong> utilizo React, Tailwind. Diseño con Figma, Adobe Photoshop. <br /> En <strong>Back-end</strong> utilizo Php, Django. He experimentado con BaaS como Appwrite.</p>
 
                 </div>
             </div>
