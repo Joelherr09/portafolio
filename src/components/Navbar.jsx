@@ -21,7 +21,7 @@ const Navbar = () => {
                 <a href="https://github.com/Joelherr09" target="_blank" rel="noreferrer"><FaGithubSquare size={36} className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-blue-500/50 rounded-lg'/></a>
             </div>
             <div className='flex'>
-                <h1 className='text-3xl font-semibold hover:scale-105 duration-300 hover:font-bold'>Joel Herrera</h1>
+                <a href="/"><h1 className='text-3xl font-semibold hover:scale-105 duration-300 hover:font-bold'>Joel Herrera</h1></a>
             </div>
         </div>
 
