@@ -30,7 +30,7 @@ const Hero = () => {
             <div className='text-white w-[90%] mt-2 h-full mx-auto items-center md:my-auto  bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50'>
                 <h1 className='text-4xl font-bold text-center py-3'>Habilidades</h1>
                 <div className=' w-[90%] mx-auto'>
-                    <p className='text-lg text-center py-2'>Soy desarrollador <strong>Fullstack</strong>, estudiante de <strong>Ingeniería en Informática</strong> en Inacap. Apasionado por el Desarrollo Web. <br /> En <strong> Front-end</strong> utilizo React, Tailwind. Diseño con Figma, Adobe Photoshop. <br /> En <strong>Back-end</strong> utilizo Php, Django. He experimentado con BaaS como Appwrite.</p>
+                    <p className='text-lg text-center py-2'>Soy desarrollador <strong>Fullstack</strong>, estudiante de <strong>Ingeniería en Informática</strong>. Apasionado por el Desarrollo Web. <br /> En <strong> Front-end</strong> utilizo React, Tailwind. Diseño con Figma, Adobe Photoshop. <br /> En <strong>Back-end</strong> utilizo Php, Django. He experimentado con BaaS como Appwrite.</p>
 
                 </div>
             </div>
