@@ -62,7 +62,7 @@ const Navbar = () => {
                         <li className='p-4 border-b border-gray-600'>Habilidades</li>
                     </a>
                     <a href="/#portafolio" onClick={handleNav}>
-                        <li className='p-4'>Portafolio</li>
+                        <li className='p-4 border-b border-gray-600'>Portafolio</li>
                     </a>
                     <a href="/#contacto" onClick={handleNav}>
                         <li className='p-4'>Contacto</li>
