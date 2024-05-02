@@ -58,7 +58,7 @@ const Contacto = () => {
 
                     <label>Mensaje</label>
                     <textarea name="message" rows="5" className='text-black p-1'></textarea>
-                    <input onClick={notify} type="submit" value="Enviar" className='bg-[#041413] py-1 my-2 hover:scale-105 duration-300 hover:bg-[#27524b]' /><ToastContainer />
+                    <input onClick={notify} type="submit" value="Enviar" className='bg-[#041413] py-1 mb-2 mt-5 hover:scale-105 duration-300 hover:bg-[#27524b]' /><ToastContainer />
                     
                 </form>
             </div>
