@@ -49,7 +49,7 @@ const Navbar = () => {
         </div>
 
 
-        <div className={!nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#130f40] ease-in-out duration-500' : 'fixed left-[-100%]'}>
+        <div className={!nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#041413] ease-in-out duration-500' : 'fixed left-[-100%]'}>
 
             <div className='w-full h-24 flex items-center justify-center'>   
                 <h1 className='text-3xl font-semibold text-center'>Joel <ReactTyped className=' font-semibold' strings={['Herrera']} typeSpeed={120} backSpeed={140} loop /></h1>
