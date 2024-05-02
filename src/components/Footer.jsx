@@ -5,7 +5,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className='bg-[#130f40]   text-white w-full mx-auto md:px-8 lg:px-16 px-4'>
+    <div className='bg-[#041413]   text-white w-full mx-auto md:px-8 lg:px-16 px-4'>
         <div className='md:w-[600px] mx-auto'>
             <div className='flex mx-auto'>        
                 <h1 className='text-4xl font-bold mx-auto py-4'>Joel <ReactTyped className=' font-bold' strings={['Herrera']} typeSpeed={120} backSpeed={140} loop /></h1>

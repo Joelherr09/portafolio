@@ -11,7 +11,7 @@ const Proyectos = () => {
         <h1 className="text-center text-2xl font-bold text-white md:text-3xl md:font-black">Proyectos Realizados</h1>
       <div className="w-[90%] mx-auto text-white  p-2 flex flex-col gap-4 md:gap-3 md:grid md:grid-cols-2">
         
-        <div className="bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50 p-3 hover:scale-105 duration-300">
+        <div className="bg-[#0c2c27] drop-shadow-lg shadow-lg shadow-black p-3 hover:scale-105 duration-300">
           <a href="https://www.vendepo.cl/" target="_blank" rel="noreferrer">
             <img src={Vendepo} alt="" />
             <div className="py-1">
@@ -24,7 +24,7 @@ const Proyectos = () => {
             </div>
           </a>
         </div>
-        <div className="bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50 p-3 hover:scale-105 duration-300">
+        <div className="bg-[#0c2c27] drop-shadow-lg shadow-lg shadow-black p-3 hover:scale-105 duration-300">
           <a href="https://www.cuartavoleibol.online/" target="_blank" rel="noreferrer">
             <img src={CVSS} alt="" />
             <div className="py-1">
@@ -37,7 +37,7 @@ const Proyectos = () => {
             </div>
           </a>
         </div>
-        <div className="bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50 p-3 hover:scale-105 duration-300">
+        <div className="bg-[#0c2c27] drop-shadow-lg shadow-lg shadow-black p-3 hover:scale-105 duration-300">
           <a href="https://programaconerick.site/" target="_blank" rel="noreferrer">
             <img src={Cabana} alt="" />
             <div className="py-1">
@@ -50,7 +50,7 @@ const Proyectos = () => {
             </div>
           </a>
         </div>
-        <div className="bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50 p-3 hover:scale-105 duration-300">
+        <div className="bg-[#0c2c27] drop-shadow-lg shadow-lg shadow-black p-3 hover:scale-105 duration-300">
           <a href="https://ecommercechile.netlify.app/" target="_blank" rel="noreferrer">
             <img src={Ecommerce} alt="" />
             <div className="py-1">

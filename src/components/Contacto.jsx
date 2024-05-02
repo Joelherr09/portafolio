@@ -34,7 +34,7 @@ const Contacto = () => {
 
   return (
     
-    <div id='contacto' className='w-[100%] md:w-[70%] mx-auto text-white bg-slate-700/80 drop-shadow-lg shadow-lg shadow-blue-500/50 p-3 my-10'>
+    <div id='contacto' className='w-[100%] md:w-[70%] mx-auto text-white bg-[#0c2c27] drop-shadow-lg shadow-lg shadow-black p-3 my-10'>
         
         <h1 className='text-center text-2xl font-semibold md:text-3xl md:font-black'>Contáctame</h1>
         <div className=' w-full mx-auto justify-center flex flex-col items-center'>
@@ -58,7 +58,7 @@ const Contacto = () => {
 
                     <label>Mensaje</label>
                     <textarea name="message" rows="5" className='text-black p-1'></textarea>
-                    <input onClick={notify} type="submit" value="Enviar" className='bg-[#130f40] py-1 my-2 hover:bg-[#2c266c]' /><ToastContainer />
+                    <input onClick={notify} type="submit" value="Enviar" className='bg-[#041413] py-1 my-2 hover:bg-[#27524b]' /><ToastContainer />
                     
                 </form>
             </div>

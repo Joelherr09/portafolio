@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .bg-img{
-    background-image: url(./assets/bg.webp);
+    background-image: url(./assets/bgtres.webp);
     position: sticky;
 }

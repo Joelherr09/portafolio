@@ -14,7 +14,7 @@ const Navbar = () => {
     }
 
   return (
-    <div className='flex items-center justify-between fixed px-4 md:px-20 h-24 w-full z-50 bg-[#130f40] mx-auto text-white shadow-lg shadow-blue-700/50'>
+    <div className='flex items-center justify-between fixed px-4 md:px-20 h-24 w-full z-50 bg-[#041413] mx-auto text-white shadow-lg shadow-black'>
         <div className='flex gap-4'>
             <div className='h-full flex gap-2 items-center'>
                 <a href="https://twitter.com/joelherr09" target="_blank" rel="noreferrer"><FaSquareXTwitter size={36} className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-blue-500/50 rounded-lg'/></a>
