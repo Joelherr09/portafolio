@@ -16,7 +16,7 @@ const Proyectos = () => {
           <a href="https://www.vendepo.cl/" target="_blank" rel="noreferrer">
             <img src={Vendepo} alt="" />
             <div className="py-1">
-                <h4 className="text-2xl font-semibold text-[#fded3f]">Vende Po!</h4>
+                <h4 className="text-2xl font-semibold text-[#f39d52]">Vende Po!</h4>
                 <p>Landing Page de mi Emprendimiento de Desarrollo Web</p>
                 <div className="flex gap-4 pt-1">
                     <p className="bg-black rounded-xl px-3">React</p>
@@ -29,11 +29,13 @@ const Proyectos = () => {
           <a href="https://ldes.rf.gd/" target="_blank" rel="noreferrer">
             <img src={LDES} alt="" />
             <div className="py-1">
-                <h4 className="text-2xl font-semibold text-[#fded3f]">Liga de Educación Superior IV Región</h4>
+                <h4 className="text-2xl font-semibold text-[#f39d52]">Liga de Educación Superior IV Región</h4>
                 <p>Aplicación Web de Liga de Educación Superior de Vóleibol de la IV Región de Chile.</p>
                 <div className="flex gap-4 pt-1">
                     <p className="bg-black rounded-xl px-3">PHP</p>
                     <p className="bg-black rounded-xl px-3">MySQL</p>
+                    <p className="bg-black rounded-xl px-3">HTML</p>
+                    <p className="bg-black rounded-xl px-3">CSS</p>
                 </div>
             </div>
           </a>
@@ -42,7 +44,7 @@ const Proyectos = () => {
           <a href="https://www.cuartavoleibol.online/" target="_blank" rel="noreferrer">
             <img src={CVSS} alt="" />
             <div className="py-1">
-                <h4 className="text-2xl font-semibold text-[#fded3f]">Cuarta Voleibol</h4>
+                <h4 className="text-2xl font-semibold text-[#f39d52]">Cuarta Voleibol</h4>
                 <p>Aplicación Web de escena competitiva de Vóleibol.</p>
                 <div className="flex gap-4 pt-1">
                     <p className="bg-black rounded-xl px-3">React</p>
@@ -55,7 +57,7 @@ const Proyectos = () => {
           <a href="https://programaconerick.site/" target="_blank" rel="noreferrer">
             <img src={Cabana} alt="" />
             <div className="py-1">
-                <h4 className="text-2xl font-semibold text-[#fded3f]">Playa Norte</h4>
+                <h4 className="text-2xl font-semibold text-[#f39d52]s">Playa Norte</h4>
                 <p>Landing Page para negocio de Cabañas</p>
                 <div className="flex gap-4 pt-1">
                     <p className="bg-black rounded-xl px-3">React</p>
@@ -68,7 +70,7 @@ const Proyectos = () => {
           <a href="https://ecommercechile.netlify.app/" target="_blank" rel="noreferrer">
             <img src={Ecommerce} alt="" />
             <div className="py-1">
-                <h4 className="text-2xl font-semibold text-[#fded3f]">E-commerce</h4>
+                <h4 className="text-2xl font-semibold text-[#f39d52]">E-commerce</h4>
                 <p>Front-end de E-commerce</p>
                 <div className="flex gap-4 pt-1">
                     <p className="bg-black rounded-xl px-3">React</p>
