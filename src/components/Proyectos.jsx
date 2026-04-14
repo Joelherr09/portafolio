@@ -1,10 +1,9 @@
 import React from "react";
 
-import CVSS from "../assets/cvSS.webp";
-import Vendepo from "../assets/VendepoSS.webp";
+import volei from "../assets/4voleiSS.png";
 import Cabana from "../assets/SSCabana.webp";
 import Ecommerce from "../assets/SSEcommerce.webp";
-import LDES from "../assets/LDESSS.webp";
+import cuartavoleibol from "../assets/cuartavoleibolSS.png";
 
 const Proyectos = () => {
   return (
@@ -13,48 +12,35 @@ const Proyectos = () => {
       <div className="w-[90%] mx-auto text-white  p-2 flex flex-col gap-4 md:gap-4 md:grid md:grid-cols-2">
         
         <div className="bg-[#0c2c27] drop-shadow-lg  p-3 hover:shadow-lg hover:shadow-orange-500/50 duration-300 hover:bg-[#163f38]">
-          <a href="https://www.vendepo.cl/" target="_blank" rel="noreferrer">
-            <img src={Vendepo} alt="" />
+          <a href="https://4volei.vercel.app/" target="_blank" rel="noreferrer">
+            <img src={volei} alt="" />
             <div className="py-1">
-                <h4 className="text-2xl font-semibold text-[#f39d52]">Vende Po!</h4>
-                <p>Landing Page de mi Emprendimiento de Desarrollo Web</p>
+                <h4 className="text-2xl font-semibold text-[#f39d52]">4Volei</h4>
+                <p>Web Informatica del Vóleibol Amateur</p>
                 <div className="flex gap-4 pt-1">
-                    <p className="bg-black rounded-xl px-3">React</p>
-                    <p className="bg-black rounded-xl px-3">Tailwind</p>
+                    <p className="bg-black rounded-xl px-3">Nextjs</p>
+                    <p className="bg-black rounded-xl px-3">Supabase</p>
+                    <p className="bg-black rounded-xl px-3">shadcn</p>
                 </div>
             </div>
           </a>
         </div>
         <div className="bg-[#0c2c27] drop-shadow-lg  p-3 hover:shadow-lg hover:shadow-orange-500/50 duration-300 hover:bg-[#163f38]">
-          <a href="https://ldes.rf.gd/" target="_blank" rel="noreferrer">
-            <img src={LDES} alt="" />
+          <a href="https://cuartavoleibol.netlify.app/" target="_blank" rel="noreferrer">
+            <img src={cuartavoleibol} alt="" />
             <div className="py-1">
-                <h4 className="text-2xl font-semibold text-[#f39d52]">Liga de Educación Superior IV Región</h4>
-                <p>Aplicación Web de Liga de Educación Superior de Vóleibol de la IV Región de Chile.</p>
+                <h4 className="text-2xl font-semibold text-[#f39d52]">cuartavoleibol</h4>
+                <p>Aplicación Web de Vóleibol Amateur con herramientas deportivas.</p>
                 <div className="flex gap-4 pt-1">
-                    <p className="bg-black rounded-xl px-3">PHP</p>
+                    <p className="bg-black rounded-xl px-3">React</p>
                     <p className="bg-black rounded-xl px-3">MySQL</p>
-                    <p className="bg-black rounded-xl px-3">HTML</p>
-                    <p className="bg-black rounded-xl px-3">CSS</p>
+                    <p className="bg-black rounded-xl px-3">MaterialUI</p>
                 </div>
             </div>
           </a>
         </div>
         <div className="bg-[#0c2c27] drop-shadow-lg  p-3 hover:shadow-lg hover:shadow-orange-500/50 duration-300 hover:bg-[#163f38]">
-          <a href="https://www.cuartavoleibol.online/" target="_blank" rel="noreferrer">
-            <img src={CVSS} alt="" />
-            <div className="py-1">
-                <h4 className="text-2xl font-semibold text-[#f39d52]">Cuarta Voleibol</h4>
-                <p>Aplicación Web de escena competitiva de Vóleibol.</p>
-                <div className="flex gap-4 pt-1">
-                    <p className="bg-black rounded-xl px-3">React</p>
-                    <p className="bg-black rounded-xl px-3">Appwrite</p>
-                </div>
-            </div>
-          </a>
-        </div>
-        <div className="bg-[#0c2c27] drop-shadow-lg  p-3 hover:shadow-lg hover:shadow-orange-500/50 duration-300 hover:bg-[#163f38]">
-          <a href="https://programaconerick.site/" target="_blank" rel="noreferrer">
+          <a href="https://cabanacoq.netlify.app" target="_blank" rel="noreferrer">
             <img src={Cabana} alt="" />
             <div className="py-1">
                 <h4 className="text-2xl font-semibold text-[#f39d52]s">Playa Norte</h4>

@@ -14,7 +14,7 @@ const Footer = () => {
                 <a href="https://twitter.com/joelherr09" target="_blank" rel="noreferrer"><FaSquareXTwitter size={36} className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-orange-500/50 rounded-lg'/></a>
                 <a href="https://github.com/Joelherr09" target="_blank" rel="noreferrer"><FaGithubSquare size={36} className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-orange-500/50 rounded-lg'/></a>
             </div>
-            <p className='text-lg text-center py-4'>© 2024 Joel Dev</p>
+            <p className='text-lg text-center py-4'>© 2026 Joel Dev</p>
         </div>
     </div>
   )
