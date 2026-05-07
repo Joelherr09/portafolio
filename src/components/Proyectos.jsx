@@ -30,7 +30,7 @@ const Proyectos = () => {
           <a href="https://aperra.vercel.app/" target="_blank" rel="noreferrer">
             <img src={aperra} alt="" />
             <div className="py-1">
-                <h4 className="text-2xl font-semibold text-[#f39d52]">cuartavoleibol</h4>
+                <h4 className="text-2xl font-semibold text-[#f39d52]">Aperra</h4>
                 <p>Plataforma para adopción de mascota, función estilo Tinder, mensajería instantánea.</p>
                 <div className="flex gap-4 pt-1">
                     <p className="bg-black rounded-xl px-3">NextJS</p>
