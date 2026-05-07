@@ -28,7 +28,7 @@ const Proyectos = () => {
         </div>
         <div className="bg-[#0c2c27] drop-shadow-lg  p-3 hover:shadow-lg hover:shadow-orange-500/50 duration-300 hover:bg-[#163f38]">
           <a href="https://aperra.vercel.app/" target="_blank" rel="noreferrer">
-            <img src={cuartavoleibol} alt="" />
+            <img src={aperra} alt="" />
             <div className="py-1">
                 <h4 className="text-2xl font-semibold text-[#f39d52]">cuartavoleibol</h4>
                 <p>Plataforma para adopción de mascota.</p>
