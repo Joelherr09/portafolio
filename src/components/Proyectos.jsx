@@ -4,6 +4,7 @@ import volei from "../assets/4voleiSS.png";
 import Cabana from "../assets/SSCabana.webp";
 import Ecommerce from "../assets/SSEcommerce.webp";
 import cuartavoleibol from "../assets/cuartavoleibolSS.png";
+import aperra from "../assets/aperraSS.png"
 
 const Proyectos = () => {
   return (
@@ -19,6 +20,20 @@ const Proyectos = () => {
                 <p>Web Informatica del Vóleibol Amateur</p>
                 <div className="flex gap-4 pt-1">
                     <p className="bg-black rounded-xl px-3">Nextjs</p>
+                    <p className="bg-black rounded-xl px-3">Supabase</p>
+                    <p className="bg-black rounded-xl px-3">shadcn</p>
+                </div>
+            </div>
+          </a>
+        </div>
+        <div className="bg-[#0c2c27] drop-shadow-lg  p-3 hover:shadow-lg hover:shadow-orange-500/50 duration-300 hover:bg-[#163f38]">
+          <a href="https://aperra.vercel.app/" target="_blank" rel="noreferrer">
+            <img src={cuartavoleibol} alt="" />
+            <div className="py-1">
+                <h4 className="text-2xl font-semibold text-[#f39d52]">cuartavoleibol</h4>
+                <p>Plataforma para adopción de mascota.</p>
+                <div className="flex gap-4 pt-1">
+                    <p className="bg-black rounded-xl px-3">NextJS</p>
                     <p className="bg-black rounded-xl px-3">Supabase</p>
                     <p className="bg-black rounded-xl px-3">shadcn</p>
                 </div>
