@@ -31,7 +31,7 @@ const Proyectos = () => {
             <img src={aperra} alt="" />
             <div className="py-1">
                 <h4 className="text-2xl font-semibold text-[#f39d52]">cuartavoleibol</h4>
-                <p>Plataforma para adopción de mascota.</p>
+                <p>Plataforma para adopción de mascota, función estilo Tinder, mensajería instantánea.</p>
                 <div className="flex gap-4 pt-1">
                     <p className="bg-black rounded-xl px-3">NextJS</p>
                     <p className="bg-black rounded-xl px-3">Supabase</p>
