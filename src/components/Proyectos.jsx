@@ -63,12 +63,12 @@ const proyectos = [
 
 const Proyectos = () => {
   return (
-    <div id="portafolio" className="w-full py-20">
+    <div id="portafolio" className="w-full py-10">
       <div className="max-w-6xl mx-auto px-6">
-        <h1 className="text-center text-4xl md:text-5xl font-bold text-[#f39d52] mb-4">
+        <h1 className="text-center text-4xl md:text-5xl font-bold text-[#f39d52] mb-4 esconder">
           Proyectos Destacados
         </h1>
-        <p className="text-center text-gray-400 text-lg mb-12">
+        <p className="text-center text-gray-400 text-lg mb-12 esconder">
           Algunos de los trabajos que más me enorgullecen
         </p>
 
@@ -76,7 +76,7 @@ const Proyectos = () => {
           {proyectos.map((proyecto, index) => (
             <div 
               key={index}
-              className="group bg-[#041413]/80 backdrop-blur-lg border border-white/10 rounded-3xl overflow-hidden hover:border-[#f39d52]/30 transition-all duration-300 hover:-translate-y-2"
+              className="group bg-[#041413]/80 backdrop-blur-lg border border-white/10 rounded-3xl overflow-hidden hover:border-[#f39d52]/30 transition-all duration-300 hover:-translate-y-2 esconder"
             >
               <a href={proyecto.link} target="_blank" rel="noreferrer">
                 <div className="relative overflow-hidden">

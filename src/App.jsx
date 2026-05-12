@@ -42,9 +42,8 @@ const App = () => {
           <Hero />
         </div>
 
-        <div className="esconder">
+        
           <Proyectos />
-        </div>
 
         {/* Secciones con animación al scroll */}
         <div className="esconder">

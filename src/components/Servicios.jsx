@@ -38,10 +38,10 @@ const Servicios = () => {
   return (
     <div id="servicios" className="w-full py-16 bg-[#041413]/40">
       <div className="max-w-5xl mx-auto px-4">
-        <h1 className="text-center text-4xl font-bold text-[#f39d52] mb-4">
+        <h1 className="text-center text-4xl font-bold text-[#f39d52] mb-4 esconder">
           Mis Servicios
         </h1>
-        <p className="text-center text-gray-400 mb-12 text-lg">
+        <p className="text-center text-gray-400 mb-12 text-lg esconder">
           Convierto tus ideas en productos digitales profesionales
         </p>
 
@@ -51,7 +51,7 @@ const Servicios = () => {
               key={index}
               className="bg-[#041413]/80 backdrop-blur-lg border border-white/10 
                          rounded-3xl p-8 hover:border-orange-500/30 hover:shadow-xl 
-                         hover:shadow-orange-500/20 transition-all duration-300 group"
+                         hover:shadow-orange-500/20 transition-all duration-300 group esconder"
             >
               <div className="text-[#f39d52] mb-6 group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
