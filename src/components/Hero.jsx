@@ -1,24 +1,33 @@
 import React from 'react';
 import Foto from '../assets/FotoPerfil1.png';
 import { 
-  SiNextdotjs, 
+  SiNextdotjs,
+  SiReact, 
   SiTypescript, 
   SiTailwindcss, 
   SiSupabase, 
   SiPostgresql, 
   SiNodedotjs, 
-  SiGit 
+  SiGit,
+  SiMysql,
+  SiMongodb,
+  SiPython,
 } from 'react-icons/si';
 
 const Hero = () => {
   const techIcons = [
     { icon: SiNextdotjs, name: 'Next.js' },
+    { icon: SiReact, name: 'React' },
     { icon: SiTypescript, name: 'TypeScript' },
     { icon: SiTailwindcss, name: 'Tailwind' },
     { icon: SiSupabase, name: 'Supabase' },
     { icon: SiPostgresql, name: 'PostgreSQL' },
     { icon: SiNodedotjs, name: 'Node.js' },
     { icon: SiGit, name: 'Git' },
+    { icon: SiMysql, name: 'MySQL' },
+    { icon: SiMongodb, name: 'MongoDB' },
+    { icon: SiPython, name: 'Python' },
+    { icon: SiReact, name: 'React Native' },
   ];
 
   return (
@@ -31,7 +40,7 @@ const Hero = () => {
       <div className="absolute inset-0 md:hidden pointer-events-none">
 
         {/* Contenedor de la imagen con máscara de fade-out */}
-        <div className="absolute right-[-40px] top-[52%] -translate-y-1/2 w-[290px]">
+        <div className="absolute right-[-40px] top-[40%] -translate-y-1/2 w-[290px]">
           {/* Imagen */}
           <img
             src={Foto}
@@ -97,7 +106,7 @@ const Hero = () => {
               text-[15px] md:text-lg 
               text-gray-300 
               leading-relaxed
-              max-w-[150px] md:max-w-lg
+              max-w-[130px] md:max-w-lg
             ">
               Creo aplicaciones web modernas, rápidas y escalables.
               Especializado en{' '}
@@ -107,7 +116,8 @@ const Hero = () => {
               , apasionado por digitalizar el deporte en Chile.
             </p>
 
-            <div className="flex flex-wrap gap-3 md:gap-4">
+            {/* Botones en columna para mobile */}
+            <div className="flex flex-col md:flex-row gap-3 md:gap-4">
 
               <a 
                 href="#portafolio"
@@ -122,6 +132,7 @@ const Hero = () => {
                   transition-all
                   hover:scale-105
                   text-sm md:text-base
+                  text-center
                 "
               >
                 Ver Proyectos
@@ -138,6 +149,7 @@ const Hero = () => {
                   rounded-2xl
                   transition-all
                   text-sm md:text-base
+                  text-center
                 "
               >
                 Hablemos
