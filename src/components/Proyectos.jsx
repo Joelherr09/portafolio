@@ -7,6 +7,7 @@ import aperra from "../assets/aperraSS.png";
 import fe from '../assets/feSS.png';
 import oxy from '../assets/oxySS.png';
 import asvolco from '../assets/asvolcoSS.png';
+import efis from '../assets/efisSS.png';
 
 const proyectos = [
   {
@@ -37,6 +38,13 @@ const proyectos = [
     img: cuartavoleibol,
     link: "https://cuartavoleibol.netlify.app/",
     tech: ["React", "MySQL"]
+  },
+  {
+    title: "Atlético EFIS",
+    desc: "Landing page para equipo competitivo de vóleibol",
+    img: efis,
+    link: "https://atletico-efis.vercel.app/",
+    tech: ["Next.js", "Tailwind"]
   },
   {
     title: "OxyVitalité",
