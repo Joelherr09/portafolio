@@ -1,11 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contacto = () => {
-
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -17,54 +15,80 @@ const Contacto = () => {
         })
         .then(
           () => {
-            console.log('SUCCESS!');
+            toast.success("¡Correo enviado correctamente!", { position: "top-center" });
+            form.current.reset();
           },
           (error) => {
+            toast.error("Error al enviar el mensaje", { position: "top-center" });
             console.log('FAILED...', error.text);
           },
         );
-    };    
-
-    const notify = () => {
-       //toast("Correo enviado!");
-        toast.success("Correo enviado!", {
-            position: "top-center",
-          });
-    }
+    };
 
   return (
-    
-    <div id='contacto' className='w-[100%] md:w-[70%] mx-auto text-white bg-[#0c2c27] drop-shadow-lg shadow-lg shadow-black p-3 my-10'>
+    <div id='contacto' className='w-full max-w-3xl mx-auto py-16 px-4'>
+      <div className='bg-[#041413]/80 backdrop-blur-lg border border-white/10 
+                      rounded-3xl p-8 md:p-12 shadow-2xl shadow-black/60'>
         
-        <h1 className='text-center text-2xl font-semibold md:text-3xl md:font-black text-[#f39d52]'>Contáctame</h1>
-        <div className=' w-full mx-auto justify-center flex flex-col items-center'>
-            <h1 className='text-center text-2xl font-bold py-4 text-red-600'>joelherreraleiva@gmail.com</h1>
+        <h1 className='text-center text-4xl font-bold text-[#f39d52] mb-2'>
+          Contáctame
+        </h1>
+        <p className='text-center text-gray-400 mb-8'>
+          Estoy disponible para nuevos proyectos
+        </p>
 
+        <div className='text-center mb-8'>
+          <a 
+            href="mailto:joelherreraleiva@gmail.com" 
+            className='text-xl md:text-2xl font-bold text-red-400 hover:text-red-500 transition-colors'
+          >
+            joelherreraleiva@gmail.com
+          </a>
+        </div>
 
-            <div className='w-[90%]'>
-                <form ref={form} onSubmit={sendEmail} id="contact-form" className='flex text-[#f39d52] flex-col w-full'>
-                
-                    <input type="hidden" name="contact_number" value="697483" />
-                    <div className='flex flex-col md:flex-row w-full gap-2'>
-                        <div className='flex flex-col w-full'>
-                            <label>Nombre</label>
-                            <input type="text" name="user_name" className='text-black p-1 duration-300 hover:shadow-lg hover:shadow-orange-500/50' />
-                        </div>
-                        <div className='flex flex-col  w-full'>
-                            <label>Email</label>
-                            <input type="email" name="user_email" className='text-black p-1 duration-300 hover:shadow-lg hover:shadow-orange-500/50' />
-                        </div>
-                    </div>
-
-                    <label>Mensaje</label>
-                    <textarea name="message" rows="5" className='text-black p-1 duration-300 hover:shadow-lg hover:shadow-orange-500/50'></textarea>
-                    <input onClick={notify} type="submit" value="Enviar" className='bg-[#041413] py-1 mb-2 mt-5 hover:scale-105 duration-300 hover:shadow-lg hover:shadow-orange-500/50' /><ToastContainer />
-                    
-                </form>
+        <div className='w-full'>
+          <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-6'>
+            <div className='grid md:grid-cols-2 gap-6'>
+              <div className='flex flex-col'>
+                <label className='text-[#f39d52] mb-2 font-medium'>Nombre</label>
+                <input 
+                  type="text" 
+                  name="user_name" 
+                  required
+                  className='bg-white/10 border border-white/20 rounded-2xl px-5 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#f39d52]/50 transition-all' 
+                />
+              </div>
+              <div className='flex flex-col'>
+                <label className='text-[#f39d52] mb-2 font-medium'>Email</label>
+                <input 
+                  type="email" 
+                  name="user_email" 
+                  required
+                  className='bg-white/10 border border-white/20 rounded-2xl px-5 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#f39d52]/50 transition-all' 
+                />
+              </div>
             </div>
 
-            <ToastContainer />
+            <div className='flex flex-col'>
+              <label className='text-[#f39d52] mb-2 font-medium'>Mensaje</label>
+              <textarea 
+                name="message" 
+                rows="6" 
+                required
+                className='bg-white/10 border border-white/20 rounded-3xl px-5 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-[#f39d52]/50 transition-all resize-none'
+              ></textarea>
+            </div>
+
+            <input 
+              type="submit" 
+              value="Enviar Mensaje" 
+              className='bg-[#f39d52] hover:bg-orange-500 text-black font-semibold py-4 rounded-2xl text-lg cursor-pointer transition-all duration-300 hover:scale-[1.03] mt-4'
+            />
+          </form>
         </div>
+      </div>
+
+      <ToastContainer position="top-center" theme="dark" />
     </div>
   );
 };

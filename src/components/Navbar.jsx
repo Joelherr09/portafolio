@@ -1,81 +1,109 @@
-import React, {useState} from 'react'
-import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+import React, { useState } from 'react';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { ReactTyped } from "react-typed";
-
 import { FaGithubSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
-
 const Navbar = () => {
-    const [nav, setNav] = useState(true)
+    const [nav, setNav] = useState(false); // Cambiado a false por defecto
 
     const handleNav = () => {
-        setNav(!nav)
-    }
+        setNav(!nav);
+    };
 
-  return (
-    <div className='flex items-center justify-between fixed px-4 md:px-20 h-24 w-full z-50 bg-[#041413] mx-auto text-white shadow-lg shadow-black'>
-        <div className='flex gap-4'>
-            <div className='h-full flex gap-2 items-center'>
-                <a href="https://twitter.com/joelherr09" target="_blank" rel="noreferrer"><FaSquareXTwitter size={36} className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-orange-500/50 rounded-lg'/></a>
-                <a href="https://github.com/Joelherr09" target="_blank" rel="noreferrer"><FaGithubSquare size={36} className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-orange-500/50 rounded-lg'/></a>
-            </div>
-            <div className='flex'>
-                <a href="/"><h1 className='text-3xl font-semibold hover:scale-105 duration-300 hover:font-bold text-[#f39d52]'>Joel Herrera</h1></a>
-            </div>
-        </div>
+    return (
+        <div className='fixed top-6 left-1/2 -translate-x-1/2 w-full max-w-5xl z-50 px-4'>
+            {/* Navbar Glass */}
+            <div className='flex items-center justify-between 
+                            bg-[#041413]/80 backdrop-blur-lg 
+                            border border-white/10 
+                            rounded-3xl 
+                            h-20 px-6 md:px-10 
+                            shadow-2xl shadow-black/50'>
 
+                {/* Logo + Redes */}
+                <div className='flex items-center gap-5'>
+                    <div className='flex gap-3'>
+                        <a href="https://twitter.com/joelherr09" target="_blank" rel="noreferrer">
+                            <FaSquareXTwitter size={32} className='hover:scale-110 duration-300 text-white hover:shadow-lg hover:shadow-orange-500/50 rounded-xl' />
+                        </a>
+                        <a href="https://github.com/Joelherr09" target="_blank" rel="noreferrer">
+                            <FaGithubSquare size={32} className='hover:scale-110 duration-300 text-white hover:shadow-lg hover:shadow-orange-500/50 rounded-xl' />
+                        </a>
+                    </div>
 
-        <ul className='hidden md:flex text-[#f39d52]'>
-            <a href="/">
-                <li className='p-4 text-lg hover:scale-105 duration-300 hover:font-bold'>Inicio</li>
-            </a>
-            <a href="/#habilidades">
-                <li className='p-4 text-lg hover:scale-105 duration-300 hover:font-bold'>Habilidades</li>
-            </a>
-            <a href="/#portafolio">
-                <li className='p-4 text-lg hover:scale-105 duration-300 hover:font-bold'>Portafolio</li>
-            </a>
-            <a href="/#contacto">
-                <li className='p-4 text-lg hover:scale-105 duration-300 hover:font-bold'>Contacto</li>
-            </a>
-            
-        </ul>
-
-
-        <div onClick={handleNav} className='block md:hidden'>
-            {!nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
-            
-        </div>
-
-
-        <div className={!nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#041413] ease-in-out duration-500' : 'fixed left-[-100%]'}>
-
-            <div className='w-full h-24 flex items-center justify-center'>   
-                <h1 className='text-3xl font-semibold text-center'>Joel <ReactTyped className=' font-semibold' strings={['Herrera']} typeSpeed={120} backSpeed={140} loop /></h1>
-            </div>
-                <ul className='p-4 uppercase text-[#f39d52]' >
-                    <a href="/" onClick={handleNav}>
-                        <li className='p-4 border-b border-gray-600'>Inicio</li>
+                    <a href="/">
+                        <h1 className='text-2xl md:text-3xl font-semibold text-[#f39d52] hover:scale-105 duration-300'>
+                            Joel Herrera
+                        </h1>
                     </a>
-                    <a href="/#habilidades" onClick={handleNav}>
-                        <li className='p-4 border-b border-gray-600'>Habilidades</li>
+                </div>
+
+                {/* Menú Desktop */}
+                <ul className='hidden md:flex items-center gap-8 text-[#f39d52]'>
+                    <a href="/" className='hover:text-white transition-colors duration-300'>
+                        <li className='text-lg'>Inicio</li>
                     </a>
-                    <a href="/#portafolio" onClick={handleNav}>
-                        <li className='p-4 border-b border-gray-600'>Portafolio</li>
+                    <a href="/#habilidades" className='hover:text-white transition-colors duration-300'>
+                        <li className='text-lg'>Habilidades</li>
                     </a>
-                    <a href="/#contacto" onClick={handleNav}>
-                        <li className='p-4'>Contacto</li>
+                    <a href="/#portafolio" className='hover:text-white transition-colors duration-300'>
+                        <li className='text-lg'>Portafolio</li>
+                    </a>
+                    <a href="/#contacto" className='hover:text-white transition-colors duration-300'>
+                        <li className='text-lg'>Contacto</li>
                     </a>
                 </ul>
-            <div className='h-full flex gap-2 mx-auto justify-center items-center pb-24'>
-                <a href="https://twitter.com/joelherr09" target="_blank" rel="noreferrer"><FaSquareXTwitter size={36} className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-blue-500/50 rounded-lg'/></a>
-                <a href="https://github.com/Joelherr09" target="_blank" rel="noreferrer"><FaGithubSquare size={36} className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-blue-500/50 rounded-lg'/></a>
+
+                {/* Botón menú móvil */}
+                <div onClick={handleNav} className='block md:hidden cursor-pointer text-[#f39d52]'>
+                    {!nav ? <AiOutlineMenu size={28} /> : <AiOutlineClose size={28} />}
+                </div>
             </div>
 
-        </div>
-    </div>
-  )
-}
+            {/* ==================== MENÚ DROPDOWN MÓVIL ==================== */}
+            <div className={`md:hidden mt-3 overflow-hidden transition-all duration-500 ease-out
+                ${nav 
+                    ? 'max-h-[420px] opacity-100' 
+                    : 'max-h-0 opacity-0'
+                }`}>
+                
+                <div className='bg-[#041413]/95 backdrop-blur-xl border border-white/10 
+                                rounded-3xl py-6 px-8 shadow-2xl shadow-black/60'>
 
-export default Navbar
+                    <div className='flex justify-center mb-6'>
+                        <h1 className='text-3xl font-semibold text-[#f39d52]'>
+                            Joel <ReactTyped strings={['Herrera']} typeSpeed={120} backSpeed={140} loop />
+                        </h1>
+                    </div>
+
+                    <ul className='flex flex-col text-center text-lg text-[#f39d52]'>
+                        <a href="/" onClick={handleNav} className='py-4 hover:text-white transition-colors border-b border-white/10'>
+                            Inicio
+                        </a>
+                        <a href="/#habilidades" onClick={handleNav} className='py-4 hover:text-white transition-colors border-b border-white/10'>
+                            Habilidades
+                        </a>
+                        <a href="/#portafolio" onClick={handleNav} className='py-4 hover:text-white transition-colors border-b border-white/10'>
+                            Portafolio
+                        </a>
+                        <a href="/#contacto" onClick={handleNav} className='py-4 hover:text-white transition-colors'>
+                            Contacto
+                        </a>
+                    </ul>
+
+                    <div className='flex justify-center gap-8 mt-8'>
+                        <a href="https://twitter.com/joelherr09" target="_blank" rel="noreferrer">
+                            <FaSquareXTwitter size={38} className='hover:scale-110 duration-300 hover:text-white' />
+                        </a>
+                        <a href="https://github.com/Joelherr09" target="_blank" rel="noreferrer">
+                            <FaGithubSquare size={38} className='hover:scale-110 duration-300 hover:text-white' />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Navbar;
