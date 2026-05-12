@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCode, FaShoppingCart, FaRocket, FaTools, FaMobileAlt } from 'react-icons/fa';
+import { FaCode, FaShoppingCart, FaRocket, FaTools, FaMobileAlt, FaBuilding } from 'react-icons/fa';
 
 const Servicios = () => {
   const services = [
@@ -26,6 +26,12 @@ const Servicios = () => {
       title: "Diseño Responsive",
       desc: "Experiencias perfectas en móviles, tablets y escritorio.",
       tech: "Mobile First"
+    },
+    {
+      icon: <FaBuilding size={40} />,
+      title: "Web Institucional y Gestión",
+      desc: "Plataformas institucionales con captación de clientes, gestión de usuarios, panel administrativo y manejo de documentos.",
+      tech: "Next.js • Supabase • Dashboard • Auth"
     },
     {
       icon: <FaTools size={40} />,
