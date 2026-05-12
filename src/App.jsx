@@ -4,8 +4,8 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import Proyectos from './components/Proyectos';
 import Contacto from './components/Contacto';
-import BotonSubir from './components/BotonSubir';
 import Servicios from './components/Servicios';
+import FloatingButtons from './components/FloatingButtons';
 
 const App = () => {
 
@@ -54,7 +54,7 @@ const App = () => {
       </main>
 
       <Footer />
-      <BotonSubir />
+      <FloatingButtons />
     </div>
   );
 };
