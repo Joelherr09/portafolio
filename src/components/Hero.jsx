@@ -1,7 +1,7 @@
 import React from 'react';
 import Foto from '../assets/FotoPerfil1.png';
 import { 
-  SiNextdotjs, SiReact, SiTypescript, SiTailwindcss, 
+  SiNextdotjs, SiTypescript, SiTailwindcss, 
   SiSupabase, SiPostgresql, SiNodedotjs, SiGit 
 } from 'react-icons/si';
 
