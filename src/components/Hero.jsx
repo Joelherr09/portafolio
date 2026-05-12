@@ -97,7 +97,7 @@ const Hero = () => {
               text-[15px] md:text-lg 
               text-gray-300 
               leading-relaxed
-              max-w-[210px] md:max-w-lg
+              max-w-[150px] md:max-w-lg
             ">
               Creo aplicaciones web modernas, rápidas y escalables.
               Especializado en{' '}

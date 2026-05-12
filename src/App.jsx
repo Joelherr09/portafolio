@@ -44,11 +44,7 @@ const App = () => {
 
         
           <Proyectos />
-
-        {/* Secciones con animación al scroll */}
-        <div className="esconder">
           <Servicios />
-        </div>
 
 
 
