@@ -73,7 +73,7 @@ const proyectos = [
     link: "https://saiko-sushi.netlify.app/",
     tech: ["Next.js", "Tailwind"],
     badge: "Comida",
-    badgeColor: "bg-cyan-500"
+    badgeColor: "bg-red-500"
   },
   {
     title: "Franco Extremo",
