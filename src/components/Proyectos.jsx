@@ -8,6 +8,7 @@ import fe from '../assets/feSS.png';
 import oxy from '../assets/oxySS.png';
 import asvolco from '../assets/asvolcoSS.png';
 import efis from '../assets/efisSS.png';
+import lrple from '../assets/lrpleSS.png';
 
 const proyectos = [
   {
@@ -44,6 +45,13 @@ const proyectos = [
     desc: "Landing page para equipo competitivo de vóleibol",
     img: efis,
     link: "https://atletico-efis.vercel.app/",
+    tech: ["Next.js", "Tailwind"]
+  },
+  {
+    title: "Liga Regional Panadería La Estrella",
+    desc: "Landing page para liga regional de vóleibol en la provincia de Limarí",
+    img: lrple,
+    link: "https://liga-panaderia-la-estrella.vercel.app/",
     tech: ["Next.js", "Tailwind"]
   },
   {
