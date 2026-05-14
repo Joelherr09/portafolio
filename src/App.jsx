@@ -6,6 +6,7 @@ import Proyectos from './components/Proyectos';
 import Contacto from './components/Contacto';
 import Servicios from './components/Servicios';
 import FloatingButtons from './components/FloatingButtons';
+import MobileScreenshotsSlider from './components/MobileScreenshotsSlider';
 
 const App = () => {
 
@@ -42,7 +43,7 @@ const App = () => {
           <Hero />
         </div>
 
-        
+          <MobileScreenshotsSlider />
           <Proyectos />
           <Servicios />
 
