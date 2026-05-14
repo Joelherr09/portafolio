@@ -2,7 +2,6 @@ import React from 'react';
 import { ReactTyped } from "react-typed";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -48,22 +47,6 @@ const Footer = () => {
             className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-orange-500/50 rounded-lg'
           >
             <FaGithubSquare size={36} />
-          </a>
-
-          <a 
-            href="https://linkedin.com/in/tu-perfil" 
-            target="_blank" 
-            rel="noreferrer"
-            className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-orange-500/50 rounded-lg'
-          >
-            <FaLinkedin size={36} />
-          </a>
-
-          <a 
-            href="mailto:tuemail@ejemplo.com" 
-            className='hover:scale-105 duration-300 hover:shadow-lg hover:shadow-orange-500/50 rounded-lg'
-          >
-            <FaEnvelope size={36} />
           </a>
         </div>
 
