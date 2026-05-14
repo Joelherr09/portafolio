@@ -5,7 +5,7 @@ import Cabana from "../assets/SSCabana.webp";
 import cuartavoleibol from "../assets/cuartavoleibolSS.png";
 import aperra from "../assets/aperraSS.png";
 import fe from '../assets/feSS.png';
-import oxy from '../assets/oxySS.png';
+import saiko from '../assets/saikoSS.png';
 import asvolco from '../assets/asvolcoSS.png';
 import efis from '../assets/efisSS.png';
 import lrple from '../assets/lrpleSS.png';
@@ -67,12 +67,12 @@ const proyectos = [
     badgeColor: "bg-emerald-500"
   },
   {
-    title: "OxyVitalité",
-    desc: "Landing page para centro de oxigenación hiperbárica",
-    img: oxy,
-    link: "https://oxyvitalite.vercel.app/",
+    title: "Saiko Sushi",
+    desc: "Landing page para restaurante de sushi",
+    img: saiko,
+    link: "https://saiko-sushi.netlify.app/",
     tech: ["Next.js", "Tailwind"],
-    badge: "Salud",
+    badge: "Comida",
     badgeColor: "bg-cyan-500"
   },
   {
