@@ -9,9 +9,9 @@ import lrpleMobile from "../assets/mobile/lrple.jpeg";
 
 const screenshots = [
   { title: "4Volei", image: fourvoleiMobile, link: "https://4volei.vercel.app/" },
+  { title: "Atlético EFIS", image: efisMobile, link: "https://atletico-efis.vercel.app/" },
   { title: "Aperra", image: aperraMobile, link: "https://aperra.vercel.app/" },
   { title: "ASVOLCO", image: asvolcoMobile, link: "https://asvolco.vercel.app/" },
-  { title: "Atlético EFIS", image: efisMobile, link: "https://atletico-efis.vercel.app/" },
   { title: "Liga Regional", image: lrpleMobile, link: "https://liga-panaderia-la-estrella.vercel.app/" },
 ];
 
