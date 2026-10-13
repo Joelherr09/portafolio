@@ -1,0 +1,316 @@
+---
+import '../../styles/builder.css';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#111111" />
+    <meta name="description" content="Constructor de sitios local: crea, guarda y exporta una landing page sin cuentas ni base de datos." />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+    <title>Constructor local — Joel Herrera</title>
+  </head>
+  <body>
+    <header class="builder-topbar">
+      <a href="/" class="back-link">← Portafolio</a>
+      <div class="builder-title"><strong>Constructor local</strong><span>Demo independiente</span></div>
+      <div class="save-state" aria-live="polite"><span></span><b>Guardado en este dispositivo</b></div>
+      <div class="top-actions">
+        <button class="button ghost" id="import-button" type="button">Cargar JSON</button>
+        <button class="button primary" id="export-button" type="button">Guardar JSON ↓</button>
+        <input id="import-file" type="file" accept="application/json,.json" hidden />
+      </div>
+    </header>
+
+    <main class="builder-shell">
+      <aside class="controls" aria-label="Controles del sitio">
+        <div class="controls-intro">
+          <span class="eyebrow">Tu sitio</span>
+          <h1>Edita la idea.<br />Mira el resultado.</h1>
+          <p>Todo queda guardado en tu navegador. Puedes descargarlo como JSON y continuar después.</p>
+        </div>
+
+        <form id="builder-form">
+          <fieldset>
+            <legend><span>01</span> Identidad</legend>
+            <label>Nombre de la marca<input name="brand" maxlength="34" /></label>
+            <label>Frase breve<input name="eyebrow" maxlength="48" /></label>
+            <label>Titular<textarea name="headline" rows="3" maxlength="100"></textarea></label>
+            <label>Descripción<textarea name="description" rows="4" maxlength="220"></textarea></label>
+          </fieldset>
+
+          <fieldset>
+            <legend><span>02</span> Acción principal</legend>
+            <div class="field-row">
+              <label>Texto<input name="ctaText" maxlength="28" /></label>
+              <label>Enlace<input name="ctaUrl" maxlength="180" /></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span>03</span> Apariencia</legend>
+            <div class="color-grid">
+              <label>Acento<input name="accent" type="color" /></label>
+              <label>Fondo<input name="background" type="color" /></label>
+              <label>Texto<input name="foreground" type="color" /></label>
+            </div>
+            <label>Composición
+              <select name="layout">
+                <option value="split">Dividida</option>
+                <option value="center">Centrada</option>
+                <option value="poster">Póster</option>
+              </select>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend><span>04</span> Contenido</legend>
+            <label class="switch"><input name="showServices" type="checkbox" /><span></span>Mostrar servicios</label>
+            <label class="switch"><input name="showAbout" type="checkbox" /><span></span>Mostrar historia</label>
+            <label>Título de servicios<input name="servicesTitle" maxlength="64" /></label>
+            <label>Servicio 1<input name="service1" maxlength="60" /></label>
+            <label>Servicio 2<input name="service2" maxlength="60" /></label>
+            <label>Servicio 3<input name="service3" maxlength="60" /></label>
+            <label>Historia<textarea name="about" rows="4" maxlength="260"></textarea></label>
+          </fieldset>
+
+          <fieldset>
+            <legend><span>05</span> Enlaces</legend>
+            <label>Instagram<input name="instagram" maxlength="120" placeholder="https://instagram.com/..." /></label>
+            <label>Correo<input name="email" type="email" maxlength="120" /></label>
+          </fieldset>
+        </form>
+
+        <div class="danger-zone">
+          <button id="reset-button" type="button">Restaurar ejemplo</button>
+          <span id="storage-size">0 KB locales</span>
+        </div>
+      </aside>
+
+      <section class="workspace" aria-label="Vista previa">
+        <div class="workspace-toolbar">
+          <div class="device-tabs" role="group" aria-label="Tamaño de vista previa">
+            <button type="button" class="active" data-device="desktop" aria-pressed="true">Escritorio</button>
+            <button type="button" data-device="mobile" aria-pressed="false">Móvil</button>
+          </div>
+          <span><i></i> Vista local</span>
+          <button id="fullscreen-button" type="button">Ampliar ↗</button>
+        </div>
+
+        <div class="preview-stage">
+          <div class="preview-window" id="preview-window">
+            <div class="preview-browser"><span></span><span></span><span></span><b>vista-local</b></div>
+            <div class="site-preview" id="site-preview">
+              <nav class="demo-nav"><a href="#" class="demo-brand"></a><div><a href="#demo-services">Servicios</a><a href="#demo-about">Historia</a><a href="#demo-contact">Contacto</a></div></nav>
+              <section class="demo-hero">
+                <div class="demo-copy"><span class="demo-eyebrow"></span><h2 class="demo-headline"></h2><p class="demo-description"></p><a class="demo-cta" href="#"></a></div>
+                <div class="demo-visual" aria-hidden="true"><span class="visual-number">01</span><div class="visual-circle"></div><div class="visual-line"></div><small>HECHO LOCALMENTE</small></div>
+              </section>
+              <section class="demo-services" id="demo-services"><span class="section-number">02</span><h3 class="demo-services-title"></h3><div class="demo-service-list"><article><b>01</b><span data-service="0"></span></article><article><b>02</b><span data-service="1"></span></article><article><b>03</b><span data-service="2"></span></article></div></section>
+              <section class="demo-about" id="demo-about"><span class="section-number">03</span><p></p></section>
+              <footer id="demo-contact"><strong class="demo-brand"></strong><div class="demo-links"></div><span>© <b class="demo-year"></b></span></footer>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+      type SiteState = {
+        version: number;
+        brand: string;
+        eyebrow: string;
+        headline: string;
+        description: string;
+        ctaText: string;
+        ctaUrl: string;
+        accent: string;
+        background: string;
+        foreground: string;
+        layout: 'split' | 'center' | 'poster';
+        showServices: boolean;
+        showAbout: boolean;
+        servicesTitle: string;
+        service1: string;
+        service2: string;
+        service3: string;
+        about: string;
+        instagram: string;
+        email: string;
+      };
+
+      const STORAGE_KEY = 'joel-portfolio-local-site-v1';
+      const defaults: SiteState = {
+        version: 1,
+        brand: 'Norte Estudio',
+        eyebrow: 'Diseño independiente · Coquimbo',
+        headline: 'Ideas claras para marcas con algo que decir.',
+        description: 'Diseñamos identidades y experiencias digitales directas, expresivas y hechas para durar.',
+        ctaText: 'Conversemos',
+        ctaUrl: 'mailto:hola@ejemplo.cl',
+        accent: '#e12118',
+        background: '#f5f1e8',
+        foreground: '#111111',
+        layout: 'split',
+        showServices: true,
+        showAbout: true,
+        servicesTitle: 'Lo que hacemos',
+        service1: 'Identidad visual',
+        service2: 'Dirección creativa',
+        service3: 'Sitios con carácter',
+        about: 'Somos un estudio pequeño. Trabajamos cerca de cada proyecto, hacemos preguntas difíciles y reducimos lo innecesario hasta que la idea se entiende.',
+        instagram: 'https://instagram.com/',
+        email: 'hola@ejemplo.cl',
+      };
+
+      const form = document.querySelector<HTMLFormElement>('#builder-form')!;
+      const preview = document.querySelector<HTMLElement>('#site-preview')!;
+      const saveState = document.querySelector<HTMLElement>('.save-state b')!;
+      const storageSize = document.querySelector<HTMLElement>('#storage-size')!;
+      const toast = document.querySelector<HTMLElement>('#toast')!;
+      let state: SiteState = loadState();
+      let saveTimer = 0;
+
+      function loadState(): SiteState {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return { ...defaults };
+          return sanitize(JSON.parse(raw));
+        } catch { return { ...defaults }; }
+      }
+
+      function sanitize(input: Partial<SiteState>): SiteState {
+        const safe = { ...defaults };
+        for (const key of Object.keys(defaults) as (keyof SiteState)[]) {
+          if (typeof input[key] === typeof defaults[key]) (safe as any)[key] = input[key];
+        }
+        safe.version = 1;
+        safe.layout = ['split', 'center', 'poster'].includes(safe.layout) ? safe.layout : 'split';
+        for (const color of ['accent', 'background', 'foreground'] as const) {
+          if (!/^#[0-9a-f]{6}$/i.test(safe[color])) safe[color] = defaults[color];
+        }
+        return safe;
+      }
+
+      function fillForm() {
+        for (const [key, value] of Object.entries(state)) {
+          const field = form.elements.namedItem(key) as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement | null;
+          if (!field) continue;
+          if (field instanceof HTMLInputElement && field.type === 'checkbox') field.checked = Boolean(value);
+          else field.value = String(value);
+        }
+      }
+
+      function render() {
+        preview.style.setProperty('--site-accent', state.accent);
+        preview.style.setProperty('--site-bg', state.background);
+        preview.style.setProperty('--site-fg', state.foreground);
+        preview.dataset.layout = state.layout;
+        preview.querySelectorAll<HTMLElement>('.demo-brand').forEach((el) => el.textContent = state.brand);
+        preview.querySelector<HTMLElement>('.demo-eyebrow')!.textContent = state.eyebrow;
+        preview.querySelector<HTMLElement>('.demo-headline')!.textContent = state.headline;
+        preview.querySelector<HTMLElement>('.demo-description')!.textContent = state.description;
+        const cta = preview.querySelector<HTMLAnchorElement>('.demo-cta')!;
+        cta.textContent = `${state.ctaText} ↗`;
+        cta.href = safeUrl(state.ctaUrl);
+        preview.querySelector<HTMLElement>('.demo-services-title')!.textContent = state.servicesTitle;
+        [state.service1, state.service2, state.service3].forEach((value, index) => {
+          preview.querySelector<HTMLElement>(`[data-service="${index}"]`)!.textContent = value;
+        });
+        preview.querySelector<HTMLElement>('.demo-services')!.hidden = !state.showServices;
+        const about = preview.querySelector<HTMLElement>('.demo-about')!;
+        about.hidden = !state.showAbout;
+        about.querySelector('p')!.textContent = state.about;
+        const links = preview.querySelector<HTMLElement>('.demo-links')!;
+        links.replaceChildren();
+        if (state.instagram) links.append(makeLink('Instagram', state.instagram));
+        if (state.email) links.append(makeLink('Correo', `mailto:${state.email}`));
+        preview.querySelector<HTMLElement>('.demo-year')!.textContent = String(new Date().getFullYear());
+      }
+
+      function makeLink(label: string, href: string) {
+        const link = document.createElement('a');
+        link.textContent = label;
+        link.href = safeUrl(href);
+        return link;
+      }
+
+      function safeUrl(value: string) {
+        const trimmed = value.trim();
+        return /^(https?:|mailto:|#)/i.test(trimmed) ? trimmed : '#';
+      }
+
+      function save() {
+        const raw = JSON.stringify(state);
+        localStorage.setItem(STORAGE_KEY, raw);
+        storageSize.textContent = `${Math.max(1, Math.ceil(new Blob([raw]).size / 1024))} KB locales`;
+        saveState.textContent = 'Guardado en este dispositivo';
+      }
+
+      function scheduleSave() {
+        saveState.textContent = 'Guardando…';
+        window.clearTimeout(saveTimer);
+        saveTimer = window.setTimeout(save, 280);
+      }
+
+      function notify(message: string) {
+        toast.textContent = message;
+        toast.classList.add('show');
+        window.setTimeout(() => toast.classList.remove('show'), 2200);
+      }
+
+      form.addEventListener('input', (event) => {
+        const field = event.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+        const key = field.name as keyof SiteState;
+        if (!key || !(key in state)) return;
+        (state as any)[key] = field instanceof HTMLInputElement && field.type === 'checkbox' ? field.checked : field.value;
+        render();
+        scheduleSave();
+      });
+
+      document.querySelector('#export-button')?.addEventListener('click', () => {
+        save();
+        const data = JSON.stringify(state, null, 2);
+        const url = URL.createObjectURL(new Blob([data], { type: 'application/json' }));
+        const anchor = document.createElement('a');
+        anchor.href = url;
+        anchor.download = `${state.brand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'mi-sitio'}.json`;
+        anchor.click();
+        URL.revokeObjectURL(url);
+        notify('Sitio exportado como JSON');
+      });
+
+      const importFile = document.querySelector<HTMLInputElement>('#import-file')!;
+      document.querySelector('#import-button')?.addEventListener('click', () => importFile.click());
+      importFile.addEventListener('change', async () => {
+        const file = importFile.files?.[0];
+        if (!file) return;
+        try {
+          const parsed = JSON.parse(await file.text());
+          if (!parsed || typeof parsed !== 'object') throw new Error('Formato inválido');
+          state = sanitize(parsed);
+          fillForm(); render(); save(); notify('Sitio cargado correctamente');
+        } catch { notify('No pude leer ese archivo JSON'); }
+        importFile.value = '';
+      });
+
+      document.querySelector('#reset-button')?.addEventListener('click', () => {
+        if (!window.confirm('¿Restaurar el ejemplo y reemplazar tus cambios locales?')) return;
+        state = { ...defaults }; fillForm(); render(); save(); notify('Ejemplo restaurado');
+      });
+
+      document.querySelectorAll<HTMLButtonElement>('[data-device]').forEach((button) => button.addEventListener('click', () => {
+        document.querySelectorAll<HTMLButtonElement>('[data-device]').forEach((item) => { item.classList.toggle('active', item === button); item.setAttribute('aria-pressed', String(item === button)); });
+        document.querySelector('#preview-window')?.classList.toggle('mobile', button.dataset.device === 'mobile');
+      }));
+
+      document.querySelector('#fullscreen-button')?.addEventListener('click', () => document.querySelector('.workspace')?.classList.toggle('expanded'));
+
+      fillForm(); render(); save();
+    </script>
+  </body>
+</html>
