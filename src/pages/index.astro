@@ -20,7 +20,7 @@ const experiments = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="theme-color" content="#f4f1ea" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="description" content="El taller digital de Joel Herrera: juegos, herramientas para el deporte y experimentos con historia, simulación y comunidad." />
     <link rel="icon" type="image/png" href="/favicon-32x32.png" />
     <title>Joel Herrera — Taller digital</title>
@@ -44,12 +44,15 @@ const experiments = [
     <main>
       <section class="hero" id="inicio">
         <div class="hero-kicker reveal"><span class="live-dot"></span>Desde Coquimbo, Chile</div>
-        <div class="hero-title reveal" style="--delay: .08s">
-          <h1>Construyo <em>juegos</em>,<br />herramientas y<br />pequeños <span>mundos.</span></h1>
+        <div class="hero-title">
+          <h1><span class="hero-line">Hago software</span><span class="hero-line">para <em>jugar</em> y</span><span class="hero-line">hacer equipo<span class="hero-period">.</span></span></h1>
         </div>
-        <div class="hero-bottom reveal" style="--delay: .16s">
-          <p>Este no es un catálogo de servicios. Es el lugar donde reúno software para el deporte, simulaciones, historias chilenas y todo lo que todavía estoy aprendiendo.</p>
-          <a class="round-link" href="#proyectos" aria-label="Ver proyectos"><span>Ver<br />proyectos</span><b>↓</b></a>
+        <div class="hero-bottom reveal" style="--delay: .3s">
+          <p>Entre canchas, videojuegos e ideas curiosas, construyo proyectos que la gente puede usar, jugar y hacer crecer.</p>
+          <div class="hero-actions">
+            <a class="hero-primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↓</span></a>
+            <a class="hero-feature" href="https://4volei.cl/" target="_blank" rel="noreferrer"><small>Ahora en juego</small><strong>4Volei</strong><span aria-hidden="true">↗</span></a>
+          </div>
         </div>
         <div class="hero-stamp" aria-hidden="true">
           <svg viewBox="0 0 140 140"><defs><path id="circle" d="M70,70 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0" /></defs><text><textPath href="#circle">JUEGOS · DEPORTE · CÓDIGO · CURIOSIDAD · </textPath></text></svg>
@@ -159,10 +162,14 @@ const experiments = [
       toggle?.addEventListener('click', () => {
         const open = toggle.getAttribute('aria-expanded') === 'true';
         toggle.setAttribute('aria-expanded', String(!open));
+        const label = toggle.querySelector('.sr-only');
+        if (label) label.textContent = open ? 'Abrir menú' : 'Cerrar menú';
         nav?.classList.toggle('is-open', !open);
       });
       nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
         toggle?.setAttribute('aria-expanded', 'false');
+        const label = toggle?.querySelector('.sr-only');
+        if (label) label.textContent = 'Abrir menú';
         nav.classList.remove('is-open');
       }));
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
