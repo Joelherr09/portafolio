@@ -15,3 +15,7 @@ npm run dev
 npm run check
 npm run build
 ```
+
+## Despliegue en Netlify
+
+`netlify.toml` configura `npm run build` y publica `dist`, el directorio que genera Astro.
